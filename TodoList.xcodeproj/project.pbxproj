@@ -96,6 +96,7 @@
 		215402672C82EEC50067CF8D /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				215402942C82EEE40067CF8D /* Views */,
 				215402682C82EEC50067CF8D /* TodoListApp.swift */,
 				2154026A2C82EEC50067CF8D /* ContentView.swift */,
 				2154026C2C82EEC50067CF8D /* Item.swift */,
@@ -128,6 +129,13 @@
 				215402872C82EEC60067CF8D /* TodoListUITestsLaunchTests.swift */,
 			);
 			path = TodoListUITests;
+			sourceTree = "<group>";
+		};
+		215402942C82EEE40067CF8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
