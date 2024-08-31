@@ -16,23 +16,43 @@ struct TodoListView: View {
         TodoItem(title: " Take out the trash", isChecked: false, type: .other),
     ]
     
+    func removeItem(itemId: Int) {
+        print("nothing")
+    }
+    
     var body: some View {
         NavigationStack {
             List {
-                ForEach($todoItems, id: \.id) { $item in
-                    NavigationLink {
-                        TodoDetailView(title: $item.title, isChecked: $item.isChecked, type: $item.type)
-                    } label: {
-                        TodoItemView(item: item) {
-                            if let index = todoItems.firstIndex(where: { $0.id == item.id}) {
-                                todoItems[index].isChecked.toggle()
+                if !todoItems.isEmpty {
+                    ForEach($todoItems, id: \.id) { $item in
+                        NavigationLink {
+                            TodoDetailView(title: $item.title, isChecked: $item.isChecked, type: $item.type)
+                        } label: {
+                            TodoItemView(item: item) {
+                                if let index = todoItems.firstIndex(where: { $0.id == item.id}) {
+                                    todoItems[index].isChecked.toggle()
+                                }
+                            }.swipeActions(edge: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/) {
+                                Button(role: .destructive) {
+                                    if let index = todoItems.firstIndex(where: {$0.id == item.id}){
+                                        todoItems.remove(at:index)
+                                    }
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
+
                             }
                         }
+                        
                     }
-                    
+                } else {
+                    Text("No tasks to display. 🗒️")
+                        .font(.body)
+                        .foregroundColor(.gray)
+                        .padding()
                 }
             }
-            .navigationTitle("To-Do List")
+            .navigationTitle("🌟 To-Do List !")
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Text("Total: \(todoItems.count)")
