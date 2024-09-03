@@ -57,6 +57,11 @@ struct TodoListView: View {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Text("Total: \(todoItems.count)")
                     
+                    Button {
+                        print("more")
+                    } label : {
+                        Label("More", systemImage: "line.3.horizontal.decrease.circle")
+                    }
                     Button(action: {
                         todoItems.insert(TodoItem(title: "New Item", isChecked: false, type: .other), at: 0)
                         

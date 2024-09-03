@@ -20,6 +20,11 @@
 		2154029A2C82EFDF0067CF8D /* TodoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215402992C82EFDF0067CF8D /* TodoItemView.swift */; };
 		2154029C2C82EFF50067CF8D /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2154029B2C82EFF50067CF8D /* TodoListView.swift */; };
 		2154029F2C82F0150067CF8D /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2154029E2C82F0150067CF8D /* TodoItem.swift */; };
+		215402A12C846A960067CF8D /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215402A02C846A960067CF8D /* ProfilView.swift */; };
+		215402A32C8629710067CF8D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215402A22C8629710067CF8D /* LoginView.swift */; };
+		215402A52C8629C50067CF8D /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215402A42C8629C50067CF8D /* LoginFormView.swift */; };
+		215402A82C86E1250067CF8D /* 9959436.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 215402A72C86E1250067CF8D /* 9959436.jpg */; };
+		215402AA2C8713B70067CF8D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215402A92C8713B70067CF8D /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,11 @@
 		215402992C82EFDF0067CF8D /* TodoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemView.swift; sourceTree = "<group>"; };
 		2154029B2C82EFF50067CF8D /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		2154029E2C82F0150067CF8D /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		215402A02C846A960067CF8D /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
+		215402A22C8629710067CF8D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		215402A42C8629C50067CF8D /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
+		215402A72C86E1250067CF8D /* 9959436.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9959436.jpg; sourceTree = "<group>"; };
+		215402A92C8713B70067CF8D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,7 @@
 				215402682C82EEC50067CF8D /* TodoListApp.swift */,
 				2154026A2C82EEC50067CF8D /* ContentView.swift */,
 				2154026C2C82EEC50067CF8D /* Item.swift */,
+				215402A72C86E1250067CF8D /* 9959436.jpg */,
 				2154026E2C82EEC60067CF8D /* Assets.xcassets */,
 				215402702C82EEC60067CF8D /* Preview Content */,
 			);
@@ -149,6 +160,10 @@
 				215402972C82EFD20067CF8D /* TodoFormView.swift */,
 				215402992C82EFDF0067CF8D /* TodoItemView.swift */,
 				2154029B2C82EFF50067CF8D /* TodoListView.swift */,
+				215402A02C846A960067CF8D /* ProfilView.swift */,
+				215402A22C8629710067CF8D /* LoginView.swift */,
+				215402A42C8629C50067CF8D /* LoginFormView.swift */,
+				215402A92C8713B70067CF8D /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -267,6 +282,7 @@
 			files = (
 				215402722C82EEC60067CF8D /* Preview Assets.xcassets in Resources */,
 				2154026F2C82EEC60067CF8D /* Assets.xcassets in Resources */,
+				215402A82C86E1250067CF8D /* 9959436.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,8 +312,12 @@
 				2154026D2C82EEC50067CF8D /* Item.swift in Sources */,
 				215402692C82EEC50067CF8D /* TodoListApp.swift in Sources */,
 				2154029C2C82EFF50067CF8D /* TodoListView.swift in Sources */,
+				215402A12C846A960067CF8D /* ProfilView.swift in Sources */,
 				215402962C82EFBF0067CF8D /* TodoDetailView.swift in Sources */,
 				2154029F2C82F0150067CF8D /* TodoItem.swift in Sources */,
+				215402A52C8629C50067CF8D /* LoginFormView.swift in Sources */,
+				215402AA2C8713B70067CF8D /* HomeView.swift in Sources */,
+				215402A32C8629710067CF8D /* LoginView.swift in Sources */,
 				2154029A2C82EFDF0067CF8D /* TodoItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
