@@ -9,14 +9,16 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        NavigationStack {
+        
             VStack {
-                HStack{
-                    Image("HomeLogin").resizable()
-                }
+                
+                Image("HomeLogin").resizable()
+            
                 LoginFormView()
+                
             }
-        }
+        
+        
         
     }
 }

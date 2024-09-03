@@ -21,54 +21,56 @@ struct TodoListView: View {
     }
     
     var body: some View {
-        NavigationStack {
+  
+        NavigationView {
             List {
-                if !todoItems.isEmpty {
-                    ForEach($todoItems, id: \.id) { $item in
-                        NavigationLink {
-                            TodoDetailView(title: $item.title, isChecked: $item.isChecked, type: $item.type)
-                        } label: {
-                            TodoItemView(item: item) {
-                                if let index = todoItems.firstIndex(where: { $0.id == item.id}) {
-                                    todoItems[index].isChecked.toggle()
-                                }
-                            }.swipeActions(edge: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/) {
-                                Button(role: .destructive) {
-                                    if let index = todoItems.firstIndex(where: {$0.id == item.id}){
-                                        todoItems.remove(at:index)
+                    if !todoItems.isEmpty {
+                        ForEach($todoItems, id: \.id) { $item in
+                            NavigationLink {
+                                TodoDetailView(title: $item.title, isChecked: $item.isChecked, type: $item.type)
+                            } label: {
+                                TodoItemView(item: item) {
+                                    if let index = todoItems.firstIndex(where: { $0.id == item.id}) {
+                                        todoItems[index].isChecked.toggle()
                                     }
-                                } label: {
-                                    Label("Delete", systemImage: "trash")
-                                }
+                                }.swipeActions(edge: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/) {
+                                    Button(role: .destructive) {
+                                        if let index = todoItems.firstIndex(where: {$0.id == item.id}){
+                                            todoItems.remove(at:index)
+                                        }
+                                    } label: {
+                                        Label("Delete", systemImage: "trash")
+                                    }
 
+                                }
                             }
+                            
                         }
-                        
-                    }
-                } else {
-                    Text("No tasks to display. 🗒️")
-                        .font(.body)
-                        .foregroundColor(.gray)
-                        .padding()
-                }
-            }
-            .navigationTitle("🌟 To-Do List !")
-            .toolbar {
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    Text("Total: \(todoItems.count)")
-                    
-                    Button {
-                        print("more")
-                    } label : {
-                        Label("More", systemImage: "line.3.horizontal.decrease.circle")
-                    }
-                    Button(action: {
-                        todoItems.insert(TodoItem(title: "New Item", isChecked: false, type: .other), at: 0)
-                        
-                    }) {
-                        Label("Add", systemImage: "plus")
+                    } else {
+                        Text("No tasks to display. 🗒️")
+                            .font(.body)
+                            .foregroundColor(.gray)
+                            .padding()
                     }
                 }
+                .navigationTitle("🌟 To-Do List !")
+                .toolbar {
+                    ToolbarItemGroup(placement: .topBarTrailing) {
+                        Text("Total: \(todoItems.count)")
+                        
+                        Button {
+                            print("more")
+                        } label : {
+                            Label("More", systemImage: "line.3.horizontal.decrease.circle")
+                        }
+                        Button(action: {
+                            todoItems.insert(TodoItem(title: "New Item", isChecked: false, type: .other), at: 0)
+                            
+                        }) {
+                            Label("Add", systemImage: "plus")
+                        }
+                    }
+                
             }
         }
     }
